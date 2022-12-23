@@ -266,11 +266,16 @@ header .nav ul li a .text {
   text-align: center;
   background: transparent;
 }
-#proyectos .cont .card .cuerpo p {
-  color: #fff;
-  text-align: left;
-  background: transparent;
+#proyectos .cont .card .cuerpo .badge {
+  display: flex;
+  gap: 5px;
+  background: none;
+}
+#proyectos .cont .card .cuerpo .badge .badge__tec {
+  background: var(--color);
+  border-radius: 25px;
   font-size: 0.8rem;
+  padding: 2px 5px;
 }
 #proyectos .cont .card .links {
   background: transparent;

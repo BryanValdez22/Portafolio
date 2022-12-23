@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;800&display=swap');
 
+// :root{
+//     --color: #e44f26; //html
+//     --color: #1572b6; //css
+//     --color: #cb6699; //scss
+//     --color: #61dafb; //react
+//     --color: #f5de19; //javascript
+// }
 
 * {
     padding: 0;
@@ -295,11 +302,16 @@ header {
                     text-align: center;
                     background: transparent;
                 }
-                p{
-                    color: #fff;
-                    text-align: left;
-                    background: transparent;
-                    font-size: .8rem;
+                .badge{
+                    display: flex;
+                    gap: 5px;
+                    background: none;
+                    .badge__tec{
+                        background: var(--color);
+                        border-radius: 25px;
+                        font-size: .8rem;
+                        padding: 2px 5px;
+                    }
                 }
             }
             .links{
