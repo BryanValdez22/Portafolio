@@ -32,6 +32,7 @@ header .logo-pag {
   color: #fff;
   background-color: #00d8ad;
   border-radius: 50%;
+  z-index: 10000;
 }
 header .logo-pag h2 {
   text-align: center;
@@ -328,7 +329,7 @@ header .toggle {
   background: transparent;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   header {
     display: flex;
     width: 100%;
@@ -336,9 +337,32 @@ header .toggle {
   header .nav {
     display: none;
   }
+  header .nav.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #071423;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   header .toggle {
     display: flex;
     width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 100000;
+  }
+  header .toggle.active {
+    position: fixed;
+    right: 30px;
+    background: transparent;
+  }
+  header .toggle.active::after {
+    content: "";
   }
   .home {
     display: flex;
