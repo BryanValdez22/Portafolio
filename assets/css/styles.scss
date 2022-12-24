@@ -11,7 +11,35 @@
     background-position: center;
     scroll-behavior: smooth;
 }
+.page__loading{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #071423;
+    overflow: hidden;
+    z-index: 10000000;
 
+    .loader {
+        width: 48px;
+        height: 48px;
+        background: transparent;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 1s linear infinite
+      }
+      .loader::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #00d8ad;
+        animation: prixClipFix 2s linear infinite ;
+      }
+}
 header {
     position: sticky;
     top: 0;
@@ -46,6 +74,7 @@ header {
         gap: 3rem;
         background: #071423;
         cursor: pointer;
+        animation: myAnimLetter 1s ease 3.5s 1 normal both;
 
         li {
             list-style: none;
@@ -57,12 +86,22 @@ header {
 
                 .text {
                     color: white;
+                    padding: 5px;
                     font-size: 1rem;
                     font-weight: 300;
                     background: #071423;
+                    display: flex;
+                    flex-direction: column;
 
-                    &:hover {
-                        color: #00d8ad;
+                    &::after{
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: #00d8ad;
+                        transition: all 500ms;
+                    }
+                    &:hover::after{
+                        width: 75px;
                     }
 
                 }
@@ -108,7 +147,7 @@ header {
             font-size: 3.5rem;
             color: #06A685;
             background: transparent;
-
+            animation: myAnimLetter 2s ease 2s normal forwards;
         }
 
         span {
@@ -400,6 +439,7 @@ header {
 
         .nav {
             display: none;
+
             &.active{
                 position: fixed;
                 top: 0;
@@ -408,27 +448,61 @@ header {
                 height: 100%;
                 background: #071423;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .text{
+                        font-size: 2rem;
+                    }
+                }
             }
         }
 
         .toggle {
             display: flex;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
-            z-index: 100000;
-            &.active{
-                position: fixed;
-                right: 30px;
-                background: transparent;
-                &::after{
-                    content: '';
-                }
-                
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+            transition: .5s;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                background: #fff;
+                transition: .5s;
             }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                background: #fff;
+                transform: translateY(8px);
+                transition: .5s;
+            }
+
+        }
+        .active{
+           position: fixed;
+           right: 30px;
+           border: 0px;
+
+           &::before{
+                transform: translateY(0) rotate(45deg);
+           }
+           &::after{
+                transform: translateY(0px) rotate(-45deg);
+           }
         }
     }
 
@@ -436,6 +510,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
 
         .blob {
             width: 400px;
@@ -456,6 +531,7 @@ header {
 
         h2 {
             font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         .about-me {
@@ -465,9 +541,9 @@ header {
             align-items: center;
             border-radius: 10px;
             gap: .5rem;
-            height: 35rem;
+            height: 40rem;
             padding: 5px;
-            margin: 10px;
+            margin: 5px;
 
             .foto {
                 padding: 1rem;
@@ -567,4 +643,110 @@ header {
             }
         }
     }
+}
+
+// animations loading..
+
+@keyframes rotate {
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
+// animation header
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+// animation leter
+@keyframes myAnimLetter {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
 }
