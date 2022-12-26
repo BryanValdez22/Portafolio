@@ -374,6 +374,90 @@ header .toggle {
   background: transparent;
 }
 
+#contactame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#contactame form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 0 15px -8px #00d8ad;
+  width: 400px;
+}
+#contactame form h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #c9c9c9;
+  text-align: center;
+  margin: 20px;
+}
+#contactame form .input__box {
+  position: relative;
+}
+#contactame form .input__box span {
+  position: absolute;
+  font-size: 1.1rem;
+  left: 15px;
+  top: 17px;
+  color: #00d8ad;
+  transition: 200ms;
+}
+#contactame form .input__box input {
+  border: 2px solid #0f243a;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #c9c9c9;
+  transition: 200ms;
+}
+#contactame form .input__box input:focus ~ span {
+  transform: translateY(-15px) translateX(-8px);
+  font-size: 0.8rem;
+}
+#contactame form .input__box input:valid ~ span {
+  transform: translateY(-15px) translateX(-8px);
+  font-size: 0.8rem;
+}
+#contactame form .input__box textarea {
+  width: 100%;
+  margin-top: 15px;
+  resize: none;
+  outline: none;
+  color: #c9c9c9;
+  padding: 15px;
+  border: 2px solid #0f243a;
+}
+#contactame form .input__box textarea:focus ~ span {
+  transform: translateY(-10px) translateX(-8px);
+  font-size: 0.8rem;
+}
+#contactame form .input__box textarea:valid ~ span {
+  transform: translateY(-10px) translateX(-8px);
+  font-size: 0.8rem;
+}
+#contactame form #btn {
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background-color: #00d8ad;
+  border-radius: 5px;
+}
+#contactame form #btn:hover {
+  background-color: #06A685;
+}
+
 @media (max-width: 550px) {
   header {
     display: flex;
