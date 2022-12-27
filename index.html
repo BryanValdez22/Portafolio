@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Brayan Valdez</title>
 </head>
 
@@ -123,6 +124,8 @@
             <div class="foto">
                 <img src="./assets/img/perfil.png" alt="perfil">
             </div>
+            <div class="circle"></div>
+            <div class="circle"></div>
             <div class="resumen">
                 <p>
                     Hola🖐, soy brayan <span></span>desarrollador web, hace ya un año me certifique como tecnologo en
@@ -165,77 +168,37 @@
     </section>
     <!-- ? section portafolio -->
     <section id="proyectos">
-        <h2>Proyectos</h2>
-        <hr>
-        <div class="cont">
-            <div class="card">
-                <div class="img">
-                    <img src="./assets/img/calculadora.png" alt="card">
-                </div>
-                <div class="cuerpo">
-                    <h2>Calculadora</h2>
-                    <div class="badge">
-                        <span class="badge__tec" style="--color: #e44f26;">HTML</span>
-                        <span class="badge__tec" style="--color: #1572b6;">CSS</span>
-                        <span class="badge__tec" style="--color: #cb6699;">SCSS</span>
-                        <span class="badge__tec" style="--color: #f5de19;">JavaScript</span>
-                    </div>
-                    <div class="links">
-                        <a target="_blank" href="https://calculadora-nine-sooty.vercel.app/">Link
-                            <box-icon name='link-alt' color='#ffffff'></box-icon>
-                        </a>
-                        <a target="_blank" href="https://github.com/BryanValdez22/CalculadoraJS">Github
-                            <box-icon name='github' type='logo' color='#ffffff'></box-icon>
-                        </a>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="nav-bar">
+                <a href="#">
+                    <i class='bx bxl-github github' style='color:#ffffff'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-link link' style='color:#ffffff' ></i>
+                </a>
             </div>
-            <div class="card">
-                <div class="img">
-                    <img src="./assets/img/contador.png" alt="card">
-                </div>
-                <div class="cuerpo">
-                    <h2>Clicks Contador</h2>
-                    <div class="badge">
-                        <span class="badge__tec" style="--color: #e44f26;">HTML</span>
-                        <span class="badge__tec" style="--color: #1572b6;">CSS</span>
-                        <span class="badge__tec" style="--color: #cb6699;">SCSS</span>
-                        <span class="badge__tec" style="--color: #61dafb;">ReactJS</span>
-                    </div>
-                    <div class="links">
-                        <a target="_blank" href="https://contador-de-clicks-omega.vercel.app/">Link
-                            <box-icon name='link-alt' color='#ffffff'></box-icon>
-                        </a>
-                        <a target="_blank" href="https://github.com/BryanValdez22/contador-de-Clicks">github
-                            <box-icon name='github' type='logo' color='#ffffff'></box-icon>
-                        </a>
-                    </div>
-                </div>
+            
+            <img class="calculator" src="./assets/img/calculadora.png" alt="calculadora">
+
+            <h1>Calculadora</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga dolore corporis, omnis incidunt qui debitis</p>
+            
+            <div class="info">
+                <i class='bx bx-plus'></i>
             </div>
-            <div class="card">
-                <div class="img">
-                    <img src="./assets/img/menu.png" alt="card">
-                </div>
-                <div class="cuerpo">
-                    <h2>Barra de Navegacion</h2>
-                    <div class="badge">
-                        <span class="badge__tec" style="--color: #e44f26;">HTML</span>
-                        <span class="badge__tec" style="--color: #1572b6;">CSS</span>
-                        <span class="badge__tec" style="--color: #cb6699;">SCSS</span>
-                        <span class="badge__tec" style="--color: #f5de19;">JavaScript</span>
-                    </div>
-                    <div class="links">
-                        <a target="_blank" href="https://navmenu.vercel.app/">Link
-                            <box-icon name='link-alt' color='#ffffff'></box-icon>
-                        </a>
-                        <a target="_blank" href="https://github.com/BryanValdez22/Menu">github
-                            <box-icon name='github' type='logo' color='#ffffff'></box-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
+
+            <img class="calculator-final" src="./assets/img/calculator-dark.png" alt="dark">
+            <h2>Calculadora <span class="h5" style="--color: #fbe310;">JavaScript</span></h2>
+            <h5>Algunos lenguajes que utilize en este proyecto: <br><br>
+                <span class="badge" style="--color: #e44f26;">HTML</span>
+                <span class="badge" style="--color: #cb6699;">SCSS</span>
+                <span class="badge" style="--color: #fbe310;">JavaScript</span>
+            </h5>
+
+            <i class='bx bx-arrow-back back-button' style='color:#000000' ></i>
         </div>
     </section>
+    <!-- ? section de contactos -->
     <section id="contactame">
         <form id="form">
             <h2>Contactame</h2>
@@ -265,6 +228,7 @@
         })();
     </script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
 </body>
 
