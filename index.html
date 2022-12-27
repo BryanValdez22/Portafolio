@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <!-- <div class="page__loading">
+    <div class="page__loading">
         <span class="loader"></span>
-    </div> -->
+    </div>
     <!-- ? barra de navegacion -->
     <header>
         <div class="logo-pag">
@@ -33,6 +33,11 @@
                 </li>
                 <li>
                     <a href="#proyectos">
+                        <span class="text">Proyectos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contactame">
                         <span class="text">Proyectos</span>
                     </a>
                 </li>
@@ -98,20 +103,9 @@
         </div>
         <div class="home-profile">
             <h2>
-                Hola, soy Brayan
+                >Hola, soy Brayan_
             </h2>
             <span>Desarrollador Web / Front-End</span>
-        </div>
-        <div class="social">
-            <a target="__blank" href="https://github.com/BryanValdez22">
-                <box-icon name='github' type='logo' color='#ffffff' style="background: transparent;"></box-icon>
-            </a>
-            <a target="__blank" href="https://www.linkedin.com/in/brayan-valdez-jaraba-506a3a1ab/">
-                <box-icon name='linkedin' type='logo' color='#ffffff' style="background: transparent;"></box-icon>
-            </a>
-            <a target="__blank" href="#">
-                <box-icon name='facebook' type='logo' color='#ffffff' style="background: transparent;"></box-icon>
-            </a>
         </div>
     </section>
     <!-- ? section acerca de mi -->
@@ -168,58 +162,92 @@
     </section>
     <!-- ? section portafolio -->
     <section id="proyectos">
-        <div class="container">
-            <div class="nav-bar">
-                <a href="#">
-                    <i class='bx bxl-github github' style='color:#ffffff'></i>
-                </a>
-                <a href="#">
-                    <i class='bx bx-link link' style='color:#ffffff' ></i>
-                </a>
-            </div>
-            
-            <img class="calculator" src="./assets/img/calculadora.png" alt="calculadora">
-
-            <h1>Calculadora</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga dolore corporis, omnis incidunt qui debitis</p>
-            
-            <div class="info">
-                <i class='bx bx-plus'></i>
-            </div>
-
-            <img class="calculator-final" src="./assets/img/calculator-dark.png" alt="dark">
-            <h2>Calculadora <span class="h5" style="--color: #fbe310;">JavaScript</span></h2>
-            <h5>Algunos lenguajes que utilize en este proyecto: <br><br>
-                <span class="badge" style="--color: #e44f26;">HTML</span>
-                <span class="badge" style="--color: #cb6699;">SCSS</span>
-                <span class="badge" style="--color: #fbe310;">JavaScript</span>
-            </h5>
-
-            <i class='bx bx-arrow-back back-button' style='color:#000000' ></i>
-        </div>
+        
     </section>
     <!-- ? section de contactos -->
     <section id="contactame">
-        <form id="form">
-            <h2>Contactame</h2>
-            <div class="input__box">
-                <input type="text" id="name" name="name" autocomplete="off" required>
-                <span>Nombre</span>
+
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+
+        <div class="container">
+
+                <div class="contact__info">
+
+                    <h2>Informacion de Contacto</h2>
+
+                    <ul class="inf">
+                        <li>
+                            <span><i class='bx bx-map'></i></span>
+                            <span>Cartagena/Bolivar Stc Nelson Mandela</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-envelope'></i></span>
+                            <span>jaravaldezbryan2016@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-phone'></i></span>
+                            <span>+57 1234567890</span>
+                        </li>
+                    </ul>
+                    <ul class="social__contact">
+                        <li>
+                            <a target="_blank" href="#">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#"> 
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            <div class="target__form">
+            
+                <form id="form">
+            
+                    <h2>Contactame</h2>
+            
+                    <div class="form__box">
+            
+                        <div class="input__box w50">
+                            <input type="text" id="name" name="name" autocomplete="off" required>
+                            <span>Nombre</span>
+                        </div>
+                        <div class="input__box w50">
+                            <input type="text" id="last" name="last" autocomplete="off" required>
+                            <span>Apellido</span>
+                        </div>
+                        <div class="input__box w100">
+                            <input type="email" id="email" name="email" autocomplete="off" required>
+                            <span>Email</span>
+                        </div>
+                        <div class="input__box w100">
+                            <textarea autocomplete="off" name="message" id="message" cols="30" rows="4" required></textarea>
+                            <span>Mensaje</span>
+                        </div>
+                        
+                        <div class="input__box w100">
+                            <input id="btn" type="submit" value="Enviar">
+                        </div>
+
+                    </div>
+            
+                </form>
+            
             </div>
-            <div class="input__box">
-                <input type="text" id="last" name="last" autocomplete="off" required>
-                <span>Apellido</span>
-            </div>
-            <div class="input__box">
-                <input type="email" id="email" name="email" autocomplete="off" required>
-                <span>Email</span>
-            </div>
-            <div class="input__box">
-                <textarea autocomplete="off" name="message" id="message" cols="30" rows="4" required></textarea>
-                <span>Mensaje</span>
-            </div>
-            <input id="btn" type="submit" value="enviar">
-        </form>
+         
+        </div>
+
     </section>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">

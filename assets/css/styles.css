@@ -140,18 +140,6 @@ header .toggle {
   color: #fff;
   background: transparent;
 }
-.home .social {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  background: transparent;
-}
-.home .social a {
-  font-size: 1.5rem;
-  z-index: 10;
-  padding: 0 5px;
-  background: transparent;
-}
 
 #about {
   height: 100vh;
@@ -178,7 +166,7 @@ header .toggle {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 0 15px -3px #0f243a;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   gap: 5rem;
 }
 #about .about-me .circle {
@@ -288,206 +276,232 @@ header .toggle {
 }
 
 #proyectos {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  padding: 10px;
-}
-#proyectos .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  justify-content: center;
-  position: relative;
-  width: 300px;
-  height: 450px;
-  background-color: #0f243a;
-  border-radius: 5px;
-  box-shadow: 0 0 15px -5px #06A685;
-  padding: 10px;
-}
-#proyectos .container .github {
-  position: absolute;
-  font-size: 25px;
-  top: 2%;
-  left: -100px;
-  background: transparent;
-}
-#proyectos .container .link {
-  position: absolute;
-  font-size: 25px;
-  top: 2%;
-  right: -100px;
-  background: transparent;
-}
-#proyectos .container img {
-  position: absolute;
-  background: transparent;
-  top: 5%;
-  height: 200px;
-}
-#proyectos .container h1 {
-  position: absolute;
-  font-size: 1.5rem;
-  color: #dadada;
-  bottom: -38%;
-  background: transparent;
-  width: 100%;
-  text-align: center;
-}
-#proyectos .container p {
-  position: absolute;
-  bottom: -38%;
-  background: transparent;
-  width: 85%;
-  text-align: center;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.8274509804);
-  font-weight: 600;
-}
-#proyectos .container .info {
-  background-color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  position: absolute;
-  bottom: 20px;
-  cursor: pointer;
-}
-#proyectos .container .info i {
-  background: transparent;
-  font-size: 25px;
-  font-weight: 800;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-#proyectos .container .calculator-final {
-  position: absolute;
-  height: 200px;
-  top: 100%;
-}
-#proyectos .container .back-button {
-  font-size: 24px;
-  color: #0f243a;
-  position: absolute;
-  left: 25px;
-  bottom: -20%;
-  background: transparent;
-  cursor: pointer;
-}
-#proyectos .container h2 {
-  position: absolute;
-  top: 100%;
-  color: #364a61;
-  background: transparent;
-  font-size: 20px;
-}
-#proyectos .container h2 .h5 {
-  background: transparent;
-  color: var(--color);
-}
-#proyectos .container h5 {
-  position: absolute;
-  bottom: 200%;
-  width: 80%;
-  color: #0f243a;
-  font-size: 15px;
-  font-weight: 500;
-  background: transparent;
-  text-align: center;
-}
-#proyectos .container .badge {
-  font-size: 15px;
-  border-radius: 5px;
-  background-color: var(--color);
-  color: #fff;
+  height: 100vh;
 }
 
 #contactame {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   height: 100vh;
 }
-#contactame form {
+#contactame .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 216, 173, 0.253);
+  -webkit-clip-path: circle(18% at 0 85%);
+          clip-path: circle(18% at 0 85%);
+}
+#contactame .circle:nth-child(2) {
+  -webkit-clip-path: circle(12.4% at 0 94%);
+          clip-path: circle(12.4% at 0 94%);
+}
+#contactame .circle:nth-child(3) {
+  -webkit-clip-path: circle(8% at 0 100%);
+          clip-path: circle(8% at 0 100%);
+}
+#contactame .circle:nth-child(4) {
+  -webkit-clip-path: circle(28.3% at 100% 75%);
+          clip-path: circle(28.3% at 100% 75%);
+  background: rgba(15, 36, 58, 0.589);
+}
+#contactame .container {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+#contactame .container .contact__info {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: #0f243a;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  margin: 30px;
-  padding: 10px;
+  justify-content: space-between;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+#contactame .container .contact__info h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  background: transparent;
+}
+#contactame .container .contact__info .inf {
   position: relative;
-  box-shadow: 0 0 15px -8px #00d8ad;
-  width: 400px;
+  margin: 20px 0;
+  background: transparent;
 }
-#contactame form h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #c9c9c9;
-  text-align: center;
-  margin: 20px;
-}
-#contactame form .input__box {
+#contactame .container .contact__info .inf li {
   position: relative;
+  list-style: none;
+  display: flex;
+  margin: 2px 0;
+  align-items: flex-start;
+  background: transparent;
 }
-#contactame form .input__box span {
-  position: absolute;
-  font-size: 1.1rem;
-  left: 15px;
-  top: 17px;
+#contactame .container .contact__info .inf li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+  background: transparent;
+}
+#contactame .container .contact__info .inf li span:nth-child(1) i {
+  max-width: 100%;
   color: #00d8ad;
-  transition: 200ms;
+  opacity: 0.5;
+  background: transparent;
 }
-#contactame form .input__box input {
-  border: 2px solid #0f243a;
-  outline: none;
+#contactame .container .contact__info .inf li span:nth-child(2) {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 500;
+  opacity: 0.5;
+  background: transparent;
+  font-size: 14px;
+}
+#contactame .container .contact__info .inf li span:nth-child(2) i {
+  max-width: 100%;
+  color: #00d8ad;
+  opacity: 0.5;
+  background: transparent;
+}
+#contactame .container .contact__info .inf li span:nth-child(2):hover {
+  opacity: 1;
+}
+#contactame .container .contact__info .social__contact {
+  position: relative;
+  display: flex;
+  background: none;
+}
+#contactame .container .contact__info .social__contact li {
+  list-style: none;
+  margin-right: 15px;
+  background: transparent;
+}
+#contactame .container .contact__info .social__contact li a {
+  text-decoration: none;
+  background: transparent;
+}
+#contactame .container .contact__info .social__contact li a i {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 25px;
   padding: 5px;
+  background: transparent;
+}
+#contactame .container .contact__info .social__contact li a i:hover {
+  opacity: 1;
+}
+#contactame .container .contact__info .social__contact .circle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #c9c9c9;
-  transition: 200ms;
+  height: 100%;
+  background: #00d8ad;
+  -webkit-clip-path: circle(32.5% at 87% 100%);
+          clip-path: circle(32.5% at 87% 100%);
 }
-#contactame form .input__box input:focus ~ span {
-  transform: translateY(-15px) translateX(-8px);
-  font-size: 0.8rem;
+#contactame .container .target__form {
+  position: absolute;
+  padding: 70px 50px;
+  background: #121D29;
+  margin-left: 150px;
+  padding-left: 250px;
+  height: 100%;
+  z-index: -1;
+  width: calc(100% - 150px);
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
 }
-#contactame form .input__box input:valid ~ span {
-  transform: translateY(-15px) translateX(-8px);
-  font-size: 0.8rem;
+#contactame .container .target__form h2 {
+  color: #06A685;
+  font-weight: 500;
+  font-size: 25px;
+  background: #121D29;
 }
-#contactame form .input__box textarea {
+#contactame .container .target__form .form__box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  background: #121D29;
+}
+#contactame .container .target__form .form__box .input__box {
+  position: relative;
+  margin-bottom: 30px;
+  background: transparent;
+}
+#contactame .container .target__form .form__box .input__box .w50 {
+  width: 47%;
+}
+#contactame .container .target__form .form__box .input__box input, #contactame .container .target__form .form__box .input__box textarea {
   width: 100%;
-  margin-top: 15px;
+  padding: 5px;
+  font-size: 18px;
   resize: none;
-  outline: none;
-  color: #c9c9c9;
-  padding: 15px;
-  border: 2px solid #0f243a;
-}
-#contactame form .input__box textarea:focus ~ span {
-  transform: translateY(-10px) translateX(-8px);
-  font-size: 0.8rem;
-}
-#contactame form .input__box textarea:valid ~ span {
-  transform: translateY(-10px) translateX(-8px);
-  font-size: 0.8rem;
-}
-#contactame form #btn {
-  width: 100%;
-  height: 40px;
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-weight: 300;
   border: none;
-  cursor: pointer;
-  background-color: #00d8ad;
-  border-radius: 5px;
+  color: #fff;
+  border-bottom: 1px solid #00d8ad;
+  outline: none;
+  opacity: 0.3;
+  background: transparent;
 }
-#contactame form #btn:hover {
-  background-color: #06A685;
+#contactame .container .target__form .form__box .input__box input:focus, #contactame .container .target__form .form__box .input__box textarea:focus {
+  opacity: 1;
+}
+#contactame .container .target__form .form__box .input__box input:focus ~ span, #contactame .container .target__form .form__box .input__box textarea:focus ~ span {
+  transform: translateY(-20px);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: aliceblue;
+}
+#contactame .container .target__form .form__box .input__box input:valid, #contactame .container .target__form .form__box .input__box textarea:valid {
+  opacity: 1;
+}
+#contactame .container .target__form .form__box .input__box input:valid ~ span, #contactame .container .target__form .form__box .input__box textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: aliceblue;
+}
+#contactame .container .target__form .form__box .input__box span {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.5s;
+  pointer-events: none;
+}
+#contactame .container .target__form .form__box .input__box textarea {
+  min-height: 120px;
+}
+#contactame .container .target__form .form__box .input__box #btn {
+  position: relative;
+  cursor: pointer;
+  background: rgba(0, 216, 173, 0.6509803922);
+  max-width: 150px;
+  border: none;
+  color: #fff;
+  padding: 12px;
+}
+#contactame .container .target__form .form__box .input__box #btn:hover {
+  background: #00d8ad;
+}
+#contactame .container .target__form .form__box .w100 {
+  width: 100%;
 }
 
 @media (max-width: 550px) {
